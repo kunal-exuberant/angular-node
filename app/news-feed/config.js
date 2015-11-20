@@ -16,6 +16,9 @@ angular.module('myApp.news-feed', ['ngRoute'])
     newsFeedApi.get().$promise.then(function (response) {
             console.log(response);
             vm.newFeedData = response;
+    },
+    function(){
+        console.log("Failed to fetch data from newsFeed service");
     });
 }]);
 

@@ -10,10 +10,13 @@ angular.module('myApp.profile-feed', ['ngRoute'])
   });
 }])
 
-.controller('profileFeedCtrl', ['newsFeedApi', function(newsFeedApi) {
+.controller('profileFeedCtrl', ['newsFeedApi','$route', function(newsFeedApi, $route) {
     var vm = this;
-    newsFeedApi.profileFeedFetch().$promise.then(function (response) {
+    newsFeedApi.profileFeedFetch($route.profileid).$promise.then(function (response) {
       console.log(response);
       vm.profileFeedData = response;
+    },
+    function(){
+        console.log("Failed to fetch data from profileFeed service");
     });
 }]);

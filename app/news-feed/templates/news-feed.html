@@ -1,2 +1,24 @@
-News feed is clear now !
-We are able to pull data end to end !
+
+<div ng-controller="newsFeedCtrl as nfc">
+
+    <div ng-repeat="action in nfc.newFeedData.action">
+        <div>{{action}}</div>
+        <br /><br />
+    </div>
+
+    <div ng-repeat="name in nfc.newFeedData.name">
+        <div>{{name}}</div>
+        <br /><br />
+    </div>
+
+    <div ng-repeat="photo in nfc.newFeedData.pimage">
+        <div>{{photo}}</div>
+        <br /><br />
+    </div>
+
+</div>
+
+<div>
+    News feed is clear now !
+    We are able to pull data end to end !
+</div>

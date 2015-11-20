@@ -15,6 +15,11 @@
                 method:'GET',
                 url:serviceUrl+'news-feed',
                 params:{}
+            },
+            profileFeedFetch:{
+                method:'GET',
+                url:serviceUrl+'profile-feed',
+                params:{}
             }
         });
         return service;

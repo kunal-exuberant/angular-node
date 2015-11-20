@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var newsFeed = require('./routes/news-feed');
+var profileFeed = require('./routes/profile-feed');
 
 //var index = require('./app/index.html');
 
@@ -34,6 +35,7 @@ app.get('/', function(req, res){
 });
 app.use('/users', users);
 app.use('/news-feed', newsFeed);
+app.use('/profile-feed', profileFeed);
 
 app.use('/node_modules/', express.static('node_modules/'));
 app.use('/app/', express.static('app/'));

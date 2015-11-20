@@ -1,0 +1,22 @@
+<div ng-controller="profileFeedCtrl as pfc">
+
+  <div ng-repeat="action in pfc.profileFeedData.action">
+    <div>{{action}}</div>
+    <br /><br />
+  </div>
+
+  <div ng-repeat="name in pfc.profileFeedData.name">
+    <div>{{name}}</div>
+    <br /><br />
+  </div>
+
+  <div ng-repeat="photo in nfc.profileFeedData.pimage">
+    <div>{{photo}}</div>
+    <br /><br />
+  </div>
+
+</div>
+
+<div>
+ Profile Feed  to pull data end to end !
+</div>

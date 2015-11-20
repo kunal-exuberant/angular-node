@@ -3,9 +3,10 @@
 angular.module('myApp.profile-feed', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/profile-feed', {
-    templateUrl: 'app/profile-feed/profile-feed.html',
-    controller: 'profileFeedCtrl'
+  $routeProvider.when('/profile-feed/:profileid', {
+      controller: 'profileFeedCtrl',
+      controllerAs: 'pfc',
+      templateUrl: 'app/profile-feed/profile-feed.html'
   });
 }])
 

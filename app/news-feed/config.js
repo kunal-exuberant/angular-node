@@ -4,7 +4,8 @@ angular.module('myApp.news-feed', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/news-feed', {
-        //controller: 'newsFeedCtrl',
+        controller: 'newsFeedCtrl',
+        controllerAs: 'nfc',
         templateUrl: 'app/news-feed/templates/news-feed.html'
 
     });

@@ -3,7 +3,7 @@
 
     //newsFeedApi.$inject[$resource];
 
-    function newsFeedApi($resource) {
+    function newsFeedApi($resource, $routeParams) {
         var serviceUrl = 'http://localhost:3000/';
         var service = $resource(serviceUrl,{},{
             getByActionStart:{
@@ -19,7 +19,7 @@
             profileFeedFetch:{
                 method:'GET',
                 url:serviceUrl+'profile-feed',
-                params:{}
+                params:{profileid:$routeParams.profileid}
             }
         });
         return service;
